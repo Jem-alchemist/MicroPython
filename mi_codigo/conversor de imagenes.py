@@ -1,3 +1,7 @@
+# Jesus Manuel Escobar Muñoz
+# 15 Jullio 2019
+# Conversor de imagenes
+
 import sys
 from PIL import Image
 
