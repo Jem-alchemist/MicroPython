@@ -27,7 +27,7 @@ while True:
       pin_out.on()
     else:
       print("Envio un comando no reconocido")
-      conn.send("Comando no contemplado" + "\n")
+      conn.send(comando + "Comando no contemplado" + "\n")
     conn.close()
   except:
     print("Error")
