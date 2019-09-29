@@ -4,8 +4,8 @@
 
 import urequests
 url_base ='https://raw.githubusercontent.com/Jem-alchemist/MicroPython/master/mi_codigo/cargar_sofwere/'
-r = urequests.get(url_base + 'lista.py')
-f = open('lista.py', 'w')
+r = urequests.get(url_base + 'test.py')
+f = open('test.py', 'w')
 f.write(r.text)
 f.close()
-exec(open('lista.py').read())
+exec(open('test.py').read())

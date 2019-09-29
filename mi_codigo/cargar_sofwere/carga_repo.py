@@ -4,6 +4,6 @@
 
 import urequests
 url_base ='https://raw.githubusercontent.com/Jem-alchemist/MicroPython/master/mi_codigo/cargar_sofwere/'
-r = urequests.get(url_base + 'lista.py')
+r = urequests.get(url_base + 'test.py')
 exec (r.text)
 
