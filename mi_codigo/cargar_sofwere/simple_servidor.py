@@ -7,7 +7,7 @@ import usocket as socket
 from machine import Pin
 pin_out = Pin(2, Pin.OUT)
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.bind(('', 80))
+s.bind(('', 11000))
 s.listen(5)
 while True:
   try:
@@ -29,7 +29,7 @@ while True:
       pin_out.on()
     else:
       print("Envio un comando no reconocido")
-      conn.send("Comando:" + comando[5:10] + " comando no contemplado" + "\n")
+      conn.send("Comando:" + comando + " comando no contemplado" + "\n")
     conn.close()
   except:
     print("Error")
