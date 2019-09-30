@@ -2,7 +2,7 @@
 # 30 de Septiembre de 2019
 # Ejemplo de un servidor conectado a un modulo TM1638
 
-
+import usocket as socket
 import tm1638
 from time import sleep_ms
 import machine
