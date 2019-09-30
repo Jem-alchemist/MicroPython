@@ -1,6 +1,6 @@
 # Jesus Manuel Escobar Muñoz
 # 29 de Septiembre de 2019
-# Ejemplo de un simple servidor en puerto 80
+# Ejemplo de un simple servidor
 
 
 import usocket as socket
