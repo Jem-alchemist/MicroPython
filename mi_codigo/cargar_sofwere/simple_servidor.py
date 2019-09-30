@@ -15,15 +15,15 @@ while True:
     print('Nueva conexion %s' % str(addr))
     request = conn.recv(1024)
     comando = str(request, 'utf-8')
-    if comando[5:10] == "final":
+    if comando[0:5] == "final":
       print("Comando fianl")
       conn.send("Final del proceso" + "\n")
       break
-    elif comando[5:10] == "ledon":
+    elif comando[0:5] == "ledon":
       print("Comando ledon")
       conn.send("Led encendido" + "\n")
       pin_out.off()
-    elif comando[5:10] == "ledof":
+    elif comando[0:5] == "ledof":
       print("Comando ledoff")
       conn.send("Led apagado" + "\n")
       pin_out.on()
