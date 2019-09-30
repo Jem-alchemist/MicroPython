@@ -4,7 +4,7 @@
 
 import usocket as socket
 
-def cliente(ip,puerto,comando)
+def cliente(ip,puerto,comando):
   s = socket.socket()
   ai = socket.getaddrinfo(ip, puerto)
   print("Informacion de la direccion:", ai)
