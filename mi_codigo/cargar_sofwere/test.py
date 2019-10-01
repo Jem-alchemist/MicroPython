@@ -45,7 +45,7 @@ if ap_if.active():
   print ("Punto de acceso activo:" + ap_if.ifconfig()[0])
   print("Essid:" + ap_if.config('essid'))
   print("Mac:" + str(ap_if.config('mac')))
-  if sta_if.isconnected():
+  if ap_if.isconnected():
     print("Conectado")
   else:
     print("Desconectado")
