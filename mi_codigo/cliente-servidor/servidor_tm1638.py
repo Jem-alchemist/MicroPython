@@ -44,6 +44,7 @@ while True:
     elif comando[0:4] == "leds":
       tm.clear()
       tm.leds(int(comando[5:8]))
+      conn.send(comando + " ejecutado\n")
     else:
       print("Envio un comando no reconocido")
       conn.send("Comando:" + comando + " comando no contemplado" + "\n")
