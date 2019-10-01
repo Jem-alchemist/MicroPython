@@ -33,7 +33,7 @@ print(titulo)
 print("-" * len(titulo))
 if sta_if.active():
   print ("Wifi activa:" + sta_if.ifconfig()[0])
-  print("Mac" + str(sta_if.config('mac')))
+  print("Mac:" + str(sta_if.config('mac')))
   if sta_if.isconnected():
     print("Conectada")
     print("Essid:" + sta_if.config('essid'))
@@ -44,7 +44,7 @@ else:
 if ap_if.active():
   print ("Punto de acceso activo:" + ap_if.ifconfig()[0])
   print("Essid:" + ap_if.config('essid'))
-  print("Mac" + str(ap_if.config('mac')))
+  print("Mac:" + str(ap_if.config('mac')))
   if sta_if.isconnected():
     print("Conectado")
   else:
