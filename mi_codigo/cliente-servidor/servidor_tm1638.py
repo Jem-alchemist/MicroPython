@@ -6,7 +6,6 @@ import usocket as socket
 import tm1638
 from time import sleep_ms
 import machine
-import ssd1306
 import dht
 d = dht.DHT22(machine.Pin(16))
 adc = machine.ADC(0)
