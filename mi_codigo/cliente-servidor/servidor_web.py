@@ -9,15 +9,15 @@ s.bind(('', 80))
 s.listen(5)
 
 web_primera = """<html><head> <title>Servidor Jem</title> <meta name="viewport" content="width=device-width, initial-scale=1">
-  <body> <p><a href="/?segunda"><img src="https://i0.wp.com/radiotgw.gob.gt/wp-content/uploads/2018/11/Elefante.jpg?resize=850%2C425&amp;ssl=1" alt="elefante" width="850" height="425" /></a></p>
+  <body> <p><a href="/segunda"><img src="https://i0.wp.com/radiotgw.gob.gt/wp-content/uploads/2018/11/Elefante.jpg?resize=850%2C425&amp;ssl=1" alt="elefante" width="850" height="425" /></a></p>
 <p>&nbsp;</p></body></html>"""
   
 web_segunda = """<html><head> <title>Servidor Jem</title> <meta name="viewport" content="width=device-width, initial-scale=1">
-  <body> <p><a href="/?primera"><img src="https://static.abc.es/media/sociedad/2016/09/25/elefante-africano-kz7G--620x349@abc.jpg" alt="elefante" width="850" height="425" /></a></p>
+  <body> <p><a href="/primera"><img src="https://static.abc.es/media/sociedad/2016/09/25/elefante-africano-kz7G--620x349@abc.jpg" alt="elefante" width="850" height="425" /></a></p>
 <p>&nbsp;</p></body></html>"""
 
 web_entrada ="""<html><head> <title>Servidor Jem</title> <meta name="viewport" content="width=device-width, initial-scale=1">
-  <body> <p><a href="/?primera"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://static.abc.es/media/sociedad/2016/09/25/elefante-africano-kz7G--620x349@abc.jpg" alt="elefante" width="850" height="425" /></a></p>
+  <body> <p><a href="/primera"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://static.abc.es/media/sociedad/2016/09/25/elefante-africano-kz7G--620x349@abc.jpg" alt="elefante" width="850" height="425" /></a></p>
 <p>&nbsp;</p></body></html>"""
 
 while True:
@@ -27,8 +27,8 @@ while True:
     request = conn.recv(1024)
     request = str(request)
     print('Content = %s' % request)
-    primera = request.find('/?primera')
-    segunda = request.find('/?segunda')
+    primera = request.find('/primera')
+    segunda = request.find('/segunda')
     if primera == 6:
       print('primera')
       response = web_primera
