@@ -4,8 +4,6 @@
 
 
 import usocket as socket
-from machine import Pin
-pin_out = Pin(2, Pin.OUT)
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind(('', 80))
 s.listen(5)
