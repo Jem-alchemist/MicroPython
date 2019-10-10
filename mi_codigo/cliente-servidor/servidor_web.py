@@ -16,6 +16,9 @@ web_segunda = """<html><head> <title>Servidor Jem</title> <meta name="viewport" 
   <body> <p><a href="/?primera"><img src="https://static.abc.es/media/sociedad/2016/09/25/elefante-africano-kz7G--620x349@abc.jpg" alt="elefante" width="850" height="425" /></a></p>
 <p>&nbsp;</p></body></html>"""
 
+wed_entrada ="""<html><head> <title>Servidor Jem</title> <meta name="viewport" content="width=device-width, initial-scale=1">
+  <body> <p><a href="/?primera"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://static.abc.es/media/sociedad/2016/09/25/elefante-africano-kz7G--620x349@abc.jpg" alt="elefante" width="850" height="425" /></a></p>
+<p>&nbsp;</p></body></html>"""
 
 while True:
  # try:
@@ -34,7 +37,7 @@ while True:
       response = web_segunda
     else:
       print('primera')
-      response = web_primera
+      response = web_entrada
     conn.send('HTTP/1.1 200 OK\n')
     conn.send('Content-Type: text/html\n')
     conn.send('Connection: close\n\n')
