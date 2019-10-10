@@ -12,5 +12,7 @@ def cliente(ip,puerto,comando):
   print("Conectando a la direccion:", addr)
   s.connect(addr)
   s.send(comando+"\n")
-  print(s.recv(4096))
+  respuesta = s.recv(4096)
+  print respuesta
   s.close()
+  return respuesta
