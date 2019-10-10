@@ -27,6 +27,7 @@ while True:
     request = conn.recv(1024)
     request = str(request)
     print('Content = %s' % request)
+    print('s='+request.split(' ')[1])
     primera = request.find('/primera')
     segunda = request.find('/segunda')
     if primera == 6:
