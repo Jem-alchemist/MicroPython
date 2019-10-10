@@ -16,7 +16,7 @@ web_segunda = """<html><head> <title>Servidor Jem</title> <meta name="viewport" 
   <body> <p><a href="/?primera"><img src="https://static.abc.es/media/sociedad/2016/09/25/elefante-africano-kz7G--620x349@abc.jpg" alt="elefante" width="850" height="425" /></a></p>
 <p>&nbsp;</p></body></html>"""
 
-wed_entrada ="""<html><head> <title>Servidor Jem</title> <meta name="viewport" content="width=device-width, initial-scale=1">
+web_entrada ="""<html><head> <title>Servidor Jem</title> <meta name="viewport" content="width=device-width, initial-scale=1">
   <body> <p><a href="/?primera"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://static.abc.es/media/sociedad/2016/09/25/elefante-africano-kz7G--620x349@abc.jpg" alt="elefante" width="850" height="425" /></a></p>
 <p>&nbsp;</p></body></html>"""
 
