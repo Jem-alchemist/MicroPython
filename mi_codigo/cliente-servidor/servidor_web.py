@@ -17,13 +17,19 @@ while True:
     print('Content = %s' % request)
     pagina = request.split(' ')[1][1:]
     if pagina == "parar_bucle": break
+    datos = pagina.find('?')
+    dato = ""
+    if datos != -1:
+      dato = pagina[datos+1:]
+      pagina = pagina[:datos]
     try:
+      print('pagina:'+pagina +'dato:'+dato)
       exec(open(pagina).read())
-      response = resultado()
-      print('sin error de apertuta response = ' +response)
+      response = resultado(dato)
+      #print('sin error de apertuta response = ' +response)
     except:
       response = open('index.html').read()
-      print('error de apertura response = ' + response)
+      #print('error de apertura response = ' + response)
     conn.send('HTTP/1.1 200 OK\n')
     conn.send('Content-Type: text/html\n')
     conn.send('Connection: close\n\n')
