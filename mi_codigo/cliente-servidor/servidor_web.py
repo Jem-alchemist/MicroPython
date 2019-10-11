@@ -20,7 +20,9 @@ while True:
     try:
       exec(open(pagina).read())
       response = resultado()
+      print('sin error de apertuta response = ' +response)
     except:
+      print('error de apertura response = ' + response)
       response = open('index.html').read()
     conn.send('HTTP/1.1 200 OK\n')
     conn.send('Content-Type: text/html\n')
