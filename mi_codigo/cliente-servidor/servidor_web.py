@@ -18,7 +18,8 @@ while True:
     pagina = request.split(' ')[1][1:]
     if pagina == "parar_bucle": break
     try:
-      response = open(pagina).read()
+      exec(open(pagina).read())
+      response = resultado()
     except:
       response = open('index.html').read()
     conn.send('HTTP/1.1 200 OK\n')
