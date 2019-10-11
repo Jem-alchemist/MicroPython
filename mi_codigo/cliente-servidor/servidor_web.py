@@ -22,13 +22,13 @@ while True:
       response = resultado()
       print('sin error de apertuta response = ' +response)
     except:
-      print('error de apertura response = ' + response)
       response = open('index.html').read()
+      print('error de apertura response = ' + response)
     conn.send('HTTP/1.1 200 OK\n')
     conn.send('Content-Type: text/html\n')
     conn.send('Connection: close\n\n')
     conn.sendall(response)
     conn.close()
-  except:
-    print("Error")
+  #except:
+   # print("Error")
 s.close()
