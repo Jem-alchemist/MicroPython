@@ -30,6 +30,8 @@ while True:
       elif pagina.find('.html') != -1:
         response = open(pagina).read()
       #print('sin error de apertuta response = ' +response)
+      else:
+        response = 'no comtemplado'
     except:
       response = open('index.html').read()
       #print('error de apertura response = ' + response)
