@@ -22,7 +22,7 @@ while True:
     if datos != -1:
       dato = pagina[datos+1:]
       pagina = pagina[:datos]
-    try:
+    #try:
       print('pagina:'+pagina +'dato:'+dato)
       if pagina.find('.py') != -1:
         exec(open(pagina).read())
@@ -32,8 +32,8 @@ while True:
       #print('sin error de apertuta response = ' +response)
       else:
         response = 'no comtemplado'
-    except:
-      response = open('index.html').read()
+    #except:
+     # response = open('index.html').read()
       #print('error de apertura response = ' + response)
     conn.send('HTTP/1.1 200 OK\n')
     conn.send('Content-Type: text/html\n')
