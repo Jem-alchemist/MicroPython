@@ -9,7 +9,7 @@ s.bind(('', 80))
 s.listen(5)
 
 while True:
-  try:
+ # try:
     conn, addr = s.accept()
     print('Nueva conexion %s' % str(addr))
     request = conn.recv(1024)
@@ -40,6 +40,6 @@ while True:
     conn.send('Connection: close\n\n')
     conn.sendall(response)
     conn.close()
-  except:
-    print("Error")
+  #except:
+   # print("Error")
 s.close()
