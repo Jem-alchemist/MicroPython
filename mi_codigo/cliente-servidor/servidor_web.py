@@ -24,8 +24,11 @@ while True:
       pagina = pagina[:datos]
     try:
       print('pagina:'+pagina +'dato:'+dato)
-      exec(open(pagina).read())
-      response = resultado(dato)
+      if pagina.find('.py') != -1:
+        exec(open(pagina).read())
+        response = resultado(dato)
+      elif pagina.find('.html') != -1:
+        response = open(pagina).read()
       #print('sin error de apertuta response = ' +response)
     except:
       response = open('index.html').read()
