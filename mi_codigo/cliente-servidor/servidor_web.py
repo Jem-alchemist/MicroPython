@@ -32,8 +32,8 @@ while True:
       #print('error de apertura response = ' + response)
     conn.send('HTTP/1.1 200 OK\n')
     conn.send('Content-Type: text/html\n')
+    conn.sendll(response)
     conn.send('Connection: close\n\n')
-    conn.sendall(response)
     conn.close()
   #except:
    # print("Error")
