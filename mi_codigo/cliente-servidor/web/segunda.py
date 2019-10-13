@@ -1,0 +1,6 @@
+def resultado(datos_entrada):
+  print(datos_entrada)
+  html = """<html><head> <title>Servidor Jem</title> <meta name="viewport" content="width=device-width, initial-scale=1">
+  <body> <p><a href="/primera.py"><img src="https://static.abc.es/media/sociedad/2016/09/25/elefante-africano-kz7G--620x349@abc.jpg" alt="elefante" width="850" height="425" /></a></p>
+<p>&nbsp;</p></body></html>"""
+  return html
