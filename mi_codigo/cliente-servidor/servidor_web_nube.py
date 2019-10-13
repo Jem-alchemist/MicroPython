@@ -28,11 +28,11 @@ while True:
       if pagina.find('.py') != -1:
         exec(r.text)
         response = resultado(dato)
-      elif pagina.find('.html') != -1:
+      else:# pagina.find('.html') != -1:
         response = r.text
       #print('sin error de apertuta response = ' +response)
-      else:
-        response = 'no comtemplado'
+      #else:
+       # response = 'no comtemplado'
     except:
       #response = open('index.html').read()
       print('error de apertura response = ' + response)
